@@ -1,0 +1,93 @@
+﻿@model CST8333ProjectByJonathanCordingley.Models.Covid
+
+<div>
+    <h2>Record Details</h2>
+    <h3>Jonathan Cordingley</h3>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.pruid)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.pruid)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.prname)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.prname)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.prnameFR)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.prnameFR)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.date)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.date)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.numconf)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.numconf)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.numprob)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.numprob)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.numdeaths)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.numdeaths)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.numtotal)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.numtotal)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.numtoday)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.numtoday)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ratetotal)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ratetotal)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

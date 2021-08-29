@@ -1,0 +1,101 @@
+﻿@model IEnumerable<CST8333ProjectByJonathanCordingley.Models.Covid>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Covid Record Details</h2>
+<h3>Jonathan Cordingley</h3>
+
+<p>
+    @Html.ActionLink("Reload Data", "Reload")
+    @Html.ActionLink("Export Data", "Export")
+    @Html.ActionLink("Create New Record", "Create")
+</p>
+
+
+<table class="table">
+ @*   By Jonathan Cordingley*@
+    <tr>
+        <th>
+            @Html.ActionLink("id", "Index", new { sortOrder = ViewBag.idSort })
+        </th>
+        <th>
+            @Html.ActionLink("pruid", "Index", new { sortOrder = ViewBag.pruidSort })
+        </th>
+        <th>
+            @Html.ActionLink("prname", "Index", new { sortOrder = ViewBag.prnameSort })
+        </th>
+        <th>
+            @Html.ActionLink("prnameFR", "Index", new { sortOrder = ViewBag.prnameFRSort })
+        </th>
+        <th>
+            @Html.ActionLink("date", "Index", new { sortOrder = ViewBag.dateSort })
+        </th>
+        <th>
+            @Html.ActionLink("numconf", "Index", new { sortOrder = ViewBag.numconfSort })
+        </th>
+        <th>
+            @Html.ActionLink("numprob", "Index", new { sortOrder = ViewBag.numprobSort })
+        </th>
+        <th>
+            @Html.ActionLink("numdeaths", "Index", new { sortOrder = ViewBag.numdeathsSort })
+        </th>
+        <th>
+            @Html.ActionLink("numtotal", "Index", new { sortOrder = ViewBag.numtotalSort })
+        </th>
+        <th>
+            @Html.ActionLink("numtoday", "Index", new { sortOrder = ViewBag.numtodaySort })
+        </th>
+        <th>
+            @Html.ActionLink("ratetotal", "Index", new { sortOrder = ViewBag.ratetotalSort })
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.pruid)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.prname)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.prnameFR)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.date)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.numconf)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.numprob)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.numdeaths)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.numtotal)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.numtoday)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ratetotal)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { item.id }) |
+                @Html.ActionLink("Details", "Details", new { item.id })
+                @Html.ActionLink("Delete", "Delete", new { item.id })
+            </td>
+        </tr>
+    }
+
+</table>
