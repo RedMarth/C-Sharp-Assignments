@@ -7,6 +7,8 @@
 # Correct display of language for repo
 ###########
 *.javascript linguist-detectable=false
+*.JavaScript linguist-detectable=false
+*.js linguist-detectable=false
 
 ###############################################################################
 # Set default behavior for command prompt diff.
